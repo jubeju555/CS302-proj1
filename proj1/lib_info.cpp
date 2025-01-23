@@ -30,14 +30,13 @@ int album::getTotalSeconds(){
     int seconds = 0;
     for(int i=0; i<tracks.length(); i++)
     {
-        stringstream ss(tracks[i]);
+        stringstream ss(tracks[i].length);
         getline(ss, minutes, ':');
         getline(ss, seconds);
         total_seconds += (minutes*60)+seconds;
     }
     return total_seconds;
 }
-
 struct artist
 {
     string name;
@@ -69,7 +68,6 @@ void storefile(string filename)
     string line = "";
     if(fileIn.is_open()){
         while(getline(fileIn, line)){
-            
         }
     }
     return;
@@ -77,6 +75,7 @@ void storefile(string filename)
 
 void organizefile(string filename)
 {
+    // organize the file in a specific format
     return;
 }
 // print file accordngi to the format
@@ -86,6 +85,5 @@ void printfile(string filename)
 }
 int main()
 {
-
     return 0;
 }
